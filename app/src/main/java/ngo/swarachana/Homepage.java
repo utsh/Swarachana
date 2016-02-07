@@ -1,5 +1,6 @@
 package ngo.swarachana;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -82,8 +83,12 @@ public class Homepage extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-        }else if (id == R.id.nav_about) {
 
+        }else if (id == R.id.nav_about) {
+        }
+        else if (id == R.id.nav_login) {
+
+            startActivity(new Intent(this, LoginActivity.class));
         } else if (id == R.id.nav_vision) {
 
         } else if (id == R.id.nav_project) {
