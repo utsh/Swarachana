@@ -7,13 +7,99 @@
     android:fitsSystemWindows="true"
     tools:context="ngo.swarachana.Register">
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/reg_detail">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
 
 
-   </RelativeLayout>
+    <include layout="@layout/content_register" />
+
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="500dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+
+        >
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/swarachanalogo"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swarachana"
+            android:textColor="@color/swarachana"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joining hands together"
+            android:textColor="@color/Quote"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="name"
+            android:background="#f3f3f3"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="30dp"/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="email"
+            android:background="#f3f3f3"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"/>
+        <EditText android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="#f3f3f3"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="15dp"/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="Re-Password"
+            android:inputType="textPassword"
+            android:background="#f3f3f3"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="mobile"
+            android:inputType="number"
+            android:background="#f3f3f3"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="address"
+            android:background="#f3f3f3"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"/>
+        <Button android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@color/Quote"
+            android:text="submit"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
+
+
