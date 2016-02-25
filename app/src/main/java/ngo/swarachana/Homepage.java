@@ -1,6 +1,7 @@
 package ngo.swarachana;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,8 +29,10 @@ public class Homepage extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Feedback", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto", "abc@gmail.com", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "This is my subject text");
+                startActivity(Intent.createChooser(emailIntent, null));
             }
         });
 
