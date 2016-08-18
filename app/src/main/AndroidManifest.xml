@@ -40,6 +40,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ngo.swarachana.LoginActivity" />
         </activity>
+        <activity
+            android:name=".register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ngo.swarachana.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
